@@ -97,6 +97,7 @@ app.delete('/teacher/:id', async (req, res) => {
     }
 });
 
-app.listen(3500, () => {
-    console.log("listening on Port 3500");
+// ✅ FIX: Use dynamic PORT from Railway
+app.listen(process.env.PORT || 3500, () => {
+    console.log("listening on port", process.env.PORT || 3500);
 });
